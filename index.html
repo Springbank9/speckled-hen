@@ -1,301 +1,185 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-    <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
- 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
-</head>
-<body>
 
-<div class='blurImg'>
-  <div style="background-image: url('https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/60/darken/25/1*4ncz3hLxmL8E_bUh-0z62w.jpeg')"></div>
-  <div class='blur' style="background-image: url('https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/40/darken/50/blur/50/1*4ncz3hLxmL8E_bUh-0z62w.jpeg')"></div>
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Snippet - BBBootstrap</title>
+                                <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+                                <script type='text/javascript' src=''></script>
+                                <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif
+ }
+
+ body {
+     min-height: 100vh;
+     background: linear-gradient(to bottom, white, #fff)
+ }
+
+ .container {
+     margin-top: 100px
+ }
+
+ .container .row .col-lg-4 {
+     display: flex;
+     justify-content: center
+ }
+
+ .card {
+     position: relative;
+     padding: 0;
+     margin: 0 !important;
+     border-radius: 20px;
+     overflow: hidden;
+     max-width: 280px;
+     max-height: 340px;
+     cursor: pointer;
+     border: none;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+ }
+
+ .card .card-image {
+     width: 100%;
+     max-height: 340px
+ }
+
+ .card .card-image img {
+     width: 100%;
+     max-height: 400px;
+     object-fit: cover
+ }
+
+ .card .card-content {
+     position: absolute;
+     bottom: -180px;
+     color: #fff;
+     background: transparent;
+     backdrop-filter: blur(15px);
+     min-height: 140px;
+     width: 100%;
+     transition: bottom .4s ease-in;
+     box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
+     border-top: 1px solid rgba(255, 255, 255, 0.2)
+ }
+
+ .card:hover .card-content {
+     bottom: 0px
+ }
+
+ .card:hover .card-content h4,
+ .card:hover .card-content h5 {
+     transform: translateY(10px);
+     opacity: 1
+ }
+
+ .card .card-content h4,
+ .card .card-content h5 {
+     font-size: 1.1rem;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     text-align: center;
+     transition: 0.8s;
+     font-weight: 500;
+     opacity: 0;
+     transform: translateY(-40px);
+     transition-delay: 0.2s
+ }
+
+ .card .card-content h5 {
+     transition: 0.5s;
+     font-weight: 200;
+     font-size: 0.8rem;
+     letter-spacing: 2px
+ }
+
+ .card .card-content .social-icons {
+     list-style: none;
+     padding: 0
+ }
+
+ .card .card-content .social-icons li {
+     margin: 10px;
+     transition: 0.5s;
+     transition-delay: calc(0.15s * var(--i));
+     transform: translateY(50px)
+ }
+
+ .card:hover .card-content .social-icons li {
+     transform: translateY(20px)
+ }
+
+ .card .card-content .social-icons li a {
+     color: #fff
+ }
+
+ .card .card-content .social-icons li a span {
+     font-size: 1.3rem
+ }
+
+ @media(max-width: 991.5px) {
+     .container {
+         margin-top: 20px
+     }
+
+     .container .row .col-lg-4 {
+         margin: 20px 0px
+     }
+ }</style>
+                                </head>
+                                <body oncontextmenu='return false' class='snippet-body'>
+                                <div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card p-0">
+                <div class="card-image"> <img src="images/bull.jpg" alt=""> </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                    <h4 class="pt-2">SomeOne Famous</h4>
+                    <h5>Creative Desinger</h5>
+                    <ul class="social-icons d-flex justify-content-center">
+                        <li style="--i:1"> <a href="#"> <span class="fab fa-facebook"></span> </a> </li>
+                        <li style="--i:2"> <a href="#"> <span class="fab fa-twitter"></span> </a> </li>
+                        <li style="--i:3"> <a href="#"> <span class="fab fa-instagram"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card p-0">
+                <div class="card-image"> <img src="images/DSC_1085.JPG" alt=""> </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                    <h4 class="pt-2">SomeOne Famous</h4>
+                    <h5>Creative Desinger</h5>
+                    <ul class="social-icons d-flex justify-content-center">
+                        <li style="--i:1"> <a href="#"> <span class="fab fa-facebook"></span> </a> </li>
+                        <li style="--i:2"> <a href="#"> <span class="fab fa-twitter"></span> </a> </li>
+                        <li style="--i:3"> <a href="#"> <span class="fab fa-instagram"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card p-0">
+                <div class="card-image"> <img src="images/brown-calf2.jpeg" alt=""> </div>
+                <div class="card-content d-flex flex-column align-items-center">
+                    <h4 class="pt-2">SomeOne Famous</h4>
+                    <h5>Creative Desinger</h5>
+                    <ul class="social-icons d-flex justify-content-center">
+                        <li style="--i:1"> <a href="#"> <span class="fab fa-facebook"></span> </a> </li>
+                        <li style="--i:2"> <a href="#"> <span class="fab fa-twitter"></span> </a> </li>
+                        <li style="--i:3"> <a href="#"> <span class="fab fa-instagram"></span> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<header>
-  <div>
-    <h1>
-      Medium
-    </h1>
-    <p>
-      Everyone’s stories and ideas
-    </p>
-    <a href='https://medium.com/' title='Medium'>Learn more</a>
-  </div>
-  <nav role='navigation'>
-    <ul>
-      <li>
-        <a class='active' href='#'>Reading List</a>
-      </li>
-      <li>
-        <a href='#'>Bookmarks</a>
-      </li>
-      <li>
-        <a href='#'>Top 100</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-<div class='container'>
-  <div></div>
-</div>
-
-<!--Main layout-->
-    <main class="mt-5">
-      <div class="container">
-        <!--Section: Content-->
-        <section>
-          <div class="row">
-            <div class="col-md-6 gx-5 mb-4">
-              <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
-                <img src="images/DSC_0738.jpg" class="img-fluid" />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-6 gx-5 mb-4">
-              <h4><strong>Facilis consequatur eligendi</strong></h4>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur
-                eligendi quisquam doloremque vero ex debitis veritatis placeat unde animi laborum
-                sapiente illo possimus, commodi dignissimos obcaecati illum maiores corporis.
-              </p>
-              <p><strong>Doloremque vero ex debitis veritatis?</strong></p>
-              <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
-                nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
-                alias, unde optio accusantium soluta, iusto molestiae adipisci et?
-              </p>
-            </div>
-          </div>
-        </section>
-        <!--Section: Content-->
-
-        <hr class="my-5" />
-
-        <!--Section: Content-->
-        <section class="text-center">
-          <h4 class="mb-5"><strong>Facilis consequatur eligendi</strong></h4>
-
-          <div class="row">
-            <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img
-                    src="images/hill.jpeg"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                  </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img
-                    src="images/brown-calf.jpeg"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                  </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img
-                    src="images/black-face-lambs.jpeg"
-                    class="img-fluid"
-                  />
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                  </p>
-                  <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--Section: Content-->
-
-        <hr class="my-5" />
-
-        <!--Section: Content-->
-        <section class="mb-5">
-          <h4 class="mb-5 text-center"><strong>Facilis consequatur eligendi</strong></h4>
-
-
-<section class="cd-horizontal-timeline">
-	<div class="timeline">
-		<div class="events-wrapper">
-			<div class="events">
-				<ol>
-					<li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
-					<li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
-					<li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
-					<li><a href="#0" data-date="20/05/2014">20 May</a></li>
-					<li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
-					<li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
-					<li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
-					<li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
-					<li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
-					<li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
-					<li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
-				</ol>
-
-				<span class="filling-line" aria-hidden="true"></span>
-			</div> <!-- .events -->
-		</div> <!-- .events-wrapper -->
-			
-		<ul class="cd-timeline-navigation">
-			<li><a href="#0" class="prev inactive">Prev</a></li>
-			<li><a href="#0" class="next">Next</a></li>
-		</ul> <!-- .cd-timeline-navigation -->
-	</div> <!-- .timeline -->
-
-	<div class="events-content">
-		<ol>
-			<li class="selected" data-date="16/01/2014">
-				<h2>Horizontal Timeline</h2>
-				<em>January 16th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="28/02/2014">
-				<h2>Event title here</h2>
-				<em>February 28th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="20/04/2014">
-				<h2>Event title here</h2>
-				<em>March 20th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="20/05/2014">
-				<h2>Event title here</h2>
-				<em>May 20th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="09/07/2014">
-				<h2>Event title here</h2>
-				<em>July 9th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="30/08/2014">
-				<h2>Event title here</h2>
-				<em>August 30th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="15/09/2014">
-				<h2>Event title here</h2>
-				<em>September 15th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="01/11/2014">
-				<h2>Event title here</h2>
-				<em>November 1st, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="10/12/2014">
-				<h2>Event title here</h2>
-				<em>December 10th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="19/01/2015">
-				<h2>Event title here</h2>
-				<em>January 19th, 2015</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="03/03/2015">
-				<h2>Event title here</h2>
-				<em>March 3rd, 2015</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-		</ol>
-	</div> <!-- .events-content -->
-</section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
-<script src="js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-crossorigin="anonymous"></script>
-   
-</body>
-</html>
+                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+                                <script type='text/javascript'></script>
+                                </body>
+                            </html>
